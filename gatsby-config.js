@@ -15,6 +15,7 @@ module.exports = {
         url: `http://localhost:8090/blocks`,
         typePrefix: `sawtooth`,
         name: `Block`,
+        entityLevel: `data`
       }
     },
 
