@@ -1,21 +1,59 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const blocks = useStaticQuery(graphql`
+    query {
+      allSawtoothBlock(filter: {id: {ne: "dummy"}}) {
+        edges {
+          node {
+            id
+            data {
+              header_signature
+              header {
+                previous_block_id
+                batch_ids
+                block_num
+                consensus
+                state_root_hash
+              }
+              batches {
+                transactions {
+                  payload
+                  header {
+                    family_name
+                    family_version
+                    inputs
+                    outputs
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Layout>
+      <SEO title="Home" keywords={[`sawtooth`, `blockhain`, `blockchain explorer`, `zenroom`, `dyne`, `decode`]} />
+      <ol>
+        {blocks.allSawtoothBlock.edges.map(node => {
+          return node.node.data.map(block => {
+            console.log(block.batches)
+            return (
+              <li key={block.header.block_num}><small>{block.batches.transactions}</small>{block.header_signature} => {block.header.previous_block_id}</li>
+            )
+          })
+        })}
+      </ol>
+    </Layout>
+  )
+}
+
 
 export default IndexPage
