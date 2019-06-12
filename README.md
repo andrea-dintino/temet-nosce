@@ -4,9 +4,10 @@
   </a>
 </p>
 <h1 align="center">
-  Temet Nosce 
+  Temet Nosce </br> </br>
+  Sawtooth block explorer
 </h1>
-  <h2 align="center">Sawtooth block explorer</h2>
+ 
 
 <hr/>
 
