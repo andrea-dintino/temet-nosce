@@ -4,9 +4,9 @@
   </a>
 </p>
 <h1 align="center">
-  Temet Nosce
-  <sub>Sawtooth block explorer</sub>
+  Temet Nosce 
 </h1>
+  <h2 align="center">Sawtooth block explorer</h2>
 
 <hr/>
 
