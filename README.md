@@ -4,12 +4,10 @@
   </a>
 </p>
 <h1 align="center">
-  Temet Nosce </br> </br>
-  Sawtooth block explorer
+  Temet Nosce </br>
+  <sub>Sawtooth block explorer</sub>
 </h1>
  
-
-<hr/>
 
 :construction: This software is part of the [DECODE project](https://decodeproject.eu) about data-ownership and [technological sovereignty](https://www.youtube.com/watch?v=RvBRbwBm_nQ). Our effort is that of improving people's awareness of how their data is processed by algorithms, as well facilitate the work of developers to create along [privacy by design principles](https://decodeproject.eu/publications/privacy-design-strategies-decode-architecture) using algorithms that can be deployed in any situation without any change.
 
