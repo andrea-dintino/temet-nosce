@@ -2,6 +2,13 @@ import React from 'react'
 
 import {graphql} from  "gatsby"
 import Layout from "../components/layout"
+var CBOR = require('cbor-sync');
+
+const parsePayload = (payload) => {
+    let decode_payload = new Buffer(payload, 'base64')
+    const cbor = CBOR.decode(decode_payload)
+    return JSON.stringify(cbor, null, 2)
+}
 
 export default ({ data }) => {
     const {header, batches, header_signature} = data.sawtoothBlock
@@ -45,7 +52,7 @@ export default ({ data }) => {
                                     </dl>
         
                                     <h4>PAYLOAD</h4>
-                                    {t.payload}
+                                    <pre>{parsePayload(t.payload)}</pre>
                                 </div>
                             )
                         })}
