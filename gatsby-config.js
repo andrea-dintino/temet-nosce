@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-apiserver`,
       options: {
-        url: `http://localhost:8090/blocks`,
+        url: process.env.SAWTOOTH_API || `http://localhost:8090/blocks`,
         typePrefix: `sawtooth`,
         name: `Block`,
         entityLevel: `data`
