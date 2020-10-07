@@ -5,7 +5,7 @@
 </p>
 <h1 align="center">
   Temet Nosce </br>
-  <sub>Sawtooth block explorer</sub>
+  <sub>Sawtooth blockchain explorer</sub>
 </h1>
  
 
@@ -27,17 +27,29 @@
 
 ***
 ## :floppy_disk: Install
-After checkout
+
+On a Devuan system or compatible
 
 ```bash
-npm i -g gatsby-cli
-yarn
-yarn start
+apt-get install -y -q yarnpkg
+yarnpkg add gatsby-cli npm
+git clone https://github.com/dyne/temet-nosce
+cd temet-nosce
+yarnpkg
 ```
 
 ***
 ## :video_game: Usage
 
+For a quick start run:
+
+```
+SAWTOOTH_API="http://localhost:8090/blocks yarn start
+```
+
+From inside the built temet-nosce directory, assuming you have Sawtooth running locally.
+
+Let's look more in deep what temet-nosce is made of.
 
 A quick look at the top-level files and directories you'll see in this project.
 
