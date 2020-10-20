@@ -31,11 +31,12 @@
 On a Devuan system or compatible
 
 ```bash
-apt-get install -y -q yarnpkg
-yarnpkg add gatsby-cli npm
+apt-get install -y yarn
+yarn add gatsby-cli npm
 git clone https://github.com/dyne/temet-nosce
 cd temet-nosce
-yarnpkg
+yarn install
+yarn start
 ```
 
 ***
@@ -44,7 +45,7 @@ yarnpkg
 For a quick start run:
 
 ```
-SAWTOOTH_API="http://localhost:8090/blocks yarn start
+SAWTOOTH_API="http://localhost:8090/blocks" yarn start
 ```
 
 From inside the built temet-nosce directory, assuming you have Sawtooth running locally.
@@ -84,7 +85,7 @@ A quick look at the top-level files and directories you'll see in this project.
 
 ***
 ## :wrench: Configuration
-`.env.development`
+`.env`
 
 The only env variable you have to define is:
 
