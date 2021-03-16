@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-apiserver`,
       options: {
-        url: process.env.SAWTOOTH_API || `http://halloween.dyne.org:8090/blocks`,
+        url: process.env.SAWTOOTH_API || `http://78.47.125.234:8008/blocks`,
         typePrefix: `sawtooth`,
         name: `Block`,
         entityLevel: `data`
